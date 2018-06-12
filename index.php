@@ -1,4 +1,4 @@
 <?php
   require('bdd.php');
-  $req = getBillets();
+  $billets = getBillets();
   require('indexview.php');

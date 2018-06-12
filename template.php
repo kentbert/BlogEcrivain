@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title><?= $title ?></title>
+  <title><?= $page_title ?></title>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">

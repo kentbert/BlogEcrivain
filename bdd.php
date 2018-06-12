@@ -2,6 +2,6 @@
   function getBillets() {
     try { $bdd = new PDO('mysql:host=localhost;dbname=blogecrivain;charset=utf8', 'root', ''); }
     catch (Exception $e) { die('Erreur : ' . $e->getMessage()); }
-    $req = $bdd->query('SELECT id_post, title, content_date, DATE_FORMAT(content_date, "%d/%m/%Y") AS content_date FROM billets ORDER BY content_date DESC LIMIT 0, 5');
-    return $req;
+    $billets = $bdd->query('SELECT post_id, post_title, post_date, DATE_FORMAT(post_date, "%d/%m/%Y") AS post_date FROM billets ORDER BY post_date DESC LIMIT 0, 5');
+    return $billets;
   }
