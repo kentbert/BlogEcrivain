@@ -10,14 +10,15 @@
 
   <div class="container mx-auto p-4">
 
-    <?php while ($data = $billets->fetch()) { ?>
+    <?php while ($data = $posts->fetch()) { ?>
       <h2 class="text-center baskerville text-4xl pt-8 py-4">
         <?php echo htmlspecialchars($data['post_title']); ?>
       </h2>
 
     <p class="text-center text-grey-darker italic border-b pb-4 mb-8">Ecrit le <?php echo ($data['post_date']); ?></p>
+    <em><a href="index.php?action=post&amp;post_id=<?= $data['post_id'] ?>">Commentaires</a></em>
 
-    <?php } $billets->closeCursor();?>
+    <?php } $posts->closeCursor();?>
 
   </div>
 
